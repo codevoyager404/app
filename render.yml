@@ -8,4 +8,4 @@ services:
       - key: SUPABASE_URL
         value: https://qqmindjleglhihsvdbmd.supabase.co
       - key: SUPABASE_KEY
-        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFxbWluZGpsZWdsaGloc3ZkYm1kIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NDU3ODcxMiwiZXhwIjoyMDcwMTU0NzEyfQ.nCJkgoFfXpe7UoQ4PjRxZ-oydoBrul_3slfkeV1mwNw
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFxbWluZGpsZWdsaGloc3ZkYm1kIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ1Nzg3MTIsImV4cCI6MjA3MDE1NDcxMn0.WBTXVEnWwSlyxcYHkCobE8i4axW2J0e20xAakZCVNk4
