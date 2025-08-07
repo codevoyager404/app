@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post to Supabase</title>
+</head>
+<body>
+    <h1>Create a Post</h1>
+    <form action="/submit" method="post">
+        <textarea name="content" rows="5" cols="40" placeholder="Write your post here..." required></textarea><br><br>
+        <input type="submit" value="Submit Post">
+    </form>
+    <hr>
+    <h2>All Posts</h2>
+    {% for post in posts %}
+        <p><strong>{{ post['created_at'] }}</strong>: {{ post['content'] }}</p>
+    {% endfor %}
+</body>
+</html>
