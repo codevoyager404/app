@@ -8,7 +8,9 @@ CORS(app)  # 🔐 Επιτρέπει αιτήματα από το iOS app
 @app.route("/api/posts", methods=["GET", "POST"])
 def handle_posts():
     if request.method == "GET":
-        res = supabase.table("posts").select("*").order("created_at", desc=True).execute()
+       res = supabase.table("posts").insert({
+    "content": content
+}).execute()
         return jsonify(res.data)
 
     if request.method == "POST":
