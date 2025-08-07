@@ -15,3 +15,6 @@ def submit():
     if content:
         supabase.table("posts").insert({"content": content}).execute()
     return redirect("/")
+
+if __name__ == "__main__":
+    app.run()
