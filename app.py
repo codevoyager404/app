@@ -8,7 +8,7 @@ CORS(app)  # 🔐 Επιτρέπει αιτήματα από το iOS app
 @app.route("/api/posts", methods=["GET", "POST"])
 def handle_posts():
     if request.method == "GET":
-       res = supabase.table("posts").insert({"content": content}).execute()
+        res = supabase.table("posts").select("*").order("created_at", desc=True).execute()
         return jsonify(res.data)
 
     if request.method == "POST":
@@ -18,10 +18,8 @@ def handle_posts():
         if not content or len(content) < 3:
             return jsonify({"error": "Too short"}), 400
 
-        user_id = "demo-user-id"  # 💡 Προσωρινό – στο μέλλον θα έρχεται από JWT ή auth token
-
+        # ❗ Προσωρινά χωρίς user_id για να αποφύγουμε uuid error
         res = supabase.table("posts").insert({
-            "user_id": user_id,
             "content": content
         }).execute()
 
